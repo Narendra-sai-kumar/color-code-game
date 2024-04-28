@@ -1,0 +1,46 @@
+body{
+    background-color: aqua;
+    background-image: linear-gradient(grey, white);
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+h1 {
+    background-image: linear-gradient(to top, white,rgb(140, 243, 250),white);
+    height:40px;
+    width:80%;
+    margin:auto;
+    margin-top:10px;
+    border-radius: 30px;
+}
+.color-boxes{
+    margin:5px;
+    display: flex;
+    justify-content: center;
+}
+
+.color-box{
+
+    border-radius: 10px;
+    box-shadow:4px 4px 8px ;
+}
+
+h2.game-status {
+
+    color:black;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.play-again{
+
+    border: none;
+    padding:10px;
+    background-color: rgb(196, 8, 8);
+    color:white;
+    border-radius:5px; 
+    font-size: 25px;
+    font-weight:bold;
+    letter-spacing:2px;
+    box-shadow:4px 4px 8px rgba(0,0,0,0.5);
+}

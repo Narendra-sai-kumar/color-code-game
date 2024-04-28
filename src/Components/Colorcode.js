@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import "./colorcode.css"
 const Colorcode = () => {
     // State for storing the correct color code
     const [correctColor, setCorrectColor] = useState("");
@@ -45,22 +45,20 @@ const Colorcode = () => {
     return (
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          textAlign: 'center',
         }}
       >
-        <h1>Color Codes</h1>
+        <h1>Color Code Game</h1>
         {/* Display the random color code */}
         <h2>{correctColor}</h2>
         <h2>What color is this?</h2>
         {/* Display colored boxes for user selection */
         }
-        <div data-testid="color-container">
+        <div className="color-boxes" data-testid="color-container">
           {
            
             random_colors.map((color, index) => (
-            <div
+            <div className='color-box'
               key={index}
               style={{
                 width: '100px',
@@ -69,6 +67,7 @@ const Colorcode = () => {
                 margin: '10px',
                 cursor: 'pointer',
                 border: '2px solid white',
+                
               }}
               onClick={() => handleColorSelection(color)}
               data-testid={
@@ -80,8 +79,8 @@ const Colorcode = () => {
         {/* Display message based on user selection */}
         {selectedColor && (
           <div>
-            <p>{selectedColor === correctColor ? 'Correct!' : 'Incorrect!'}</p>
-            <button style={{border:"none", padding:"10px", backgroundColor:"red", color:"white", borderRadius:"5px" }} onClick={handlePlayAgain}>Play Again</button>
+            <h2 className='game-status'>{selectedColor === correctColor ? 'Correct!🎉🎉😍' : 'Incorrect!🤨'}</h2>
+            <button className="play-again"  onClick={handlePlayAgain}>Play Again</button>
           </div>
         )}
       </div>
