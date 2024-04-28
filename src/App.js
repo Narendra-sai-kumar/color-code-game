@@ -1,9 +1,10 @@
 import './App.css';
+import Colorcode from './Components/Colorcode';
 
 function App() {
   return (
     <div className="App">
-      Hiii
+      <Colorcode/>
     </div>
   );
 }
